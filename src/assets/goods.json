@@ -1,0 +1,77 @@
+[
+    {
+        "id": "1",
+        "name": "Lphone12-Z-1",
+        "inStock": true,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "orange",
+        "serial": "123123123123123",
+        "cost": "790.55"
+    },
+    {
+        "id": "2",
+        "name": "Lphone12-U-2",
+        "inStock": false,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "orange",
+        "serial": "3123123",
+        "cost": "900"
+    },
+    {
+        "id": "3",
+        "name": "SuperLed LT TV r123123123",
+        "inStock": true,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "BG",
+        "serial": "123123123123123",
+        "cost": "1500"
+    },{
+        "id": "4",
+        "name": "Conon Hipstor MK20000",
+        "inStock": false,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "Conon",
+        "serial": "123123123123123",
+        "cost": "9999.99"
+    },{
+        "id": "5",
+        "name": "PonyPlaystation 5",
+        "inStock": false,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "Pony Entertainment Ponyland",
+        "serial": "123123123123123",
+        "cost": "532.10"
+    },{
+        "id": "6",
+        "name": "Blu Ray Player",
+        "inStock": true,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "Some Company which produce blu ray players (R)(C)TM",
+        "serial": "123123123123123",
+        "cost": "250"
+    },{
+        "id": "6",
+        "name": "Blu Ray Player v2",
+        "inStock": false,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "Some Company which produce blu ray players (R)(C)TM",
+        "serial": "123123123123123",
+        "cost": "292.35"
+    },{
+        "id": "6",
+        "name": "Blu Ray Player v3",
+        "inStock": false,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "Some Company which produce blu ray players (R)(C)TM",
+        "serial": "123123123123123",
+        "cost": "370.15"
+    },{
+        "id": "9",
+        "name": "LphoneZ-2",
+        "inStock": false,
+        "description": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "manufacturer": "orange",
+        "serial": "123123123123123",
+        "cost": "890.25"
+    }
+]
