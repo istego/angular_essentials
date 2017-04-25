@@ -5,15 +5,18 @@ import {
   NgModule,
   ApplicationRef
 } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {
   removeNgStyles,
   createNewHosts,
   createInputTransfer
 } from '@angularclass/hmr';
-import {
-  RouterModule,
-  PreloadAllModules
-} from '@angular/router';
+
+import { AppHeaderComponent } from './app-header/index';
+import { ListComponent } from './list/index';
+import { HighlightDirective } from './list/highlight.directive';
+import { ListHeaderComponent } from './list-header/index';
+import { ListItemComponent } from './list-item/index';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -43,12 +46,18 @@ type StoreType = {
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [
-    AppComponent
+    AppComponent,
+    AppHeaderComponent,
+    ListComponent,
+    HighlightDirective,
+    ListHeaderComponent,
+    ListItemComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CommonModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
