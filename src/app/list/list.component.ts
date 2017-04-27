@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'list',
   templateUrl: './list.component.html'
 })
 export class ListComponent {
+  @Input() list;
+  @Output() chosen: EventEmitter<{}> = new EventEmitter<{}>();
+  @Output() newItem: EventEmitter<any> = new EventEmitter<any>();
+
   constructor() {
 
   }
@@ -15,11 +19,25 @@ export class ListComponent {
     this.search = message;
   }
 
-  onChoose(obj:{}):void {
-    console.log(obj);
+  addNewItem():void {
+    this.newItem.emit();
   }
 
-  public list = [
+  onChosen(obj:{}):void {
+    this.chosen.emit(obj);
+  }
+
+  deleteItem(index:number, list:{}[]):void {
+    list.splice(index, 1);
+    this.chosen.emit(null);
+  }
+
+  getNewItem(item:any):void {
+    console.log('here');
+    this.list.push(item);
+  }
+
+  /*public list = [
     {
       name: 'Paul',
       sex: 'male',
@@ -30,5 +48,5 @@ export class ListComponent {
       sex: 'male',
       birthday: 1012150581753
     }
-  ];
+  ];*/
 }

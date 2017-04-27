@@ -17,9 +17,40 @@ export class AppComponent {
 
   }
 
-  public currentItem = null;
+  public list = [
+    {
+      name: 'Paul',
+      sex: 'male',
+      birthday: 1000151481753
+    },
+    {
+      name: 'Marcos',
+      sex: 'male',
+      birthday: 1012150581753
+    }
+  ];
 
-  /*onNotify(obj:{}):void {
-    console.log(obj);
-  }*/
+  public currentItem = null;
+  public newItem = null;
+
+  onChosen(obj:{}):void {
+    this.currentItem = obj;
+  }
+
+  addNewItem():void {
+    this.newItem = {
+      name: null,
+      sex: 'male',
+      birthday: null
+    };
+  }
+
+  saveItem(item:any):void {
+    let dateObj = {
+      birthday: new Date(item.birthday).getTime()
+    };
+    let newItem = Object.assign({}, item, dateObj);
+    this.list.push(newItem);
+  }
+
 }

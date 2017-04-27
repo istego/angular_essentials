@@ -6,9 +6,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ListItemComponent {
   @Input() item;
-  @Output() choose: EventEmitter<{}> = new EventEmitter<{}>();
+  @Input() index;
+  @Output() chosen: EventEmitter<{}> = new EventEmitter<{}>();
+  @Output() deletedIndex: EventEmitter<number> = new EventEmitter<number>();
 
-  chooseCurrentItem() {
-    this.choose.emit({name: 'qwe'});
+  selectCurrentItem() {
+    this.chosen.emit(this.item);
+  }
+
+  deleteItem(index) {
+    this.deletedIndex.emit(index);
   }
 }
