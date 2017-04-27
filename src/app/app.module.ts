@@ -14,9 +14,11 @@ import {
 
 import { AppHeaderComponent } from './app-header/index';
 import { ListComponent } from './list/index';
+import { SearchPipe } from './list/list-filter.pipe';
 import { HighlightDirective } from './list/highlight.directive';
-import { ListHeaderComponent } from './list-header/index';
-import { ListItemComponent } from './list-item/index';
+import { ListHeaderComponent } from './list/list-header/index';
+import { ListItemComponent } from './list/list-item/index';
+import { ItemDetailComponent } from './item-detail/index';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -51,7 +53,9 @@ type StoreType = {
     ListComponent,
     HighlightDirective,
     ListHeaderComponent,
-    ListItemComponent
+    ListItemComponent,
+    SearchPipe,
+    ItemDetailComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,

@@ -1,6 +1,6 @@
-<list-header></list-header>
+<list-header (notify)='onNotify($event)'></list-header>
 <ul>
-  <li *ngFor="let item of list" hoverHighlight>
+  <li *ngFor="let item of list | search: search" hoverHighlight>
     <list-item [item]="item.name"></list-item>
   </li>
 </ul>

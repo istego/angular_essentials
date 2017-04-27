@@ -16,4 +16,10 @@ export class AppComponent {
   constructor() {
 
   }
+
+  public currentItem = null;
+
+  /*onNotify(obj:{}):void {
+    console.log(obj);
+  }*/
 }

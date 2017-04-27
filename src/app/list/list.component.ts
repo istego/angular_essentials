@@ -9,16 +9,26 @@ export class ListComponent {
 
   }
 
+  public search = null;
+
+  onNotify(message:string):void {
+    this.search = message;
+  }
+
+  onChoose(obj:{}):void {
+    console.log(obj);
+  }
+
   public list = [
     {
       name: 'Paul',
       sex: 'male',
-      birthday: '11.03.1684'
+      birthday: 1000151481753
     },
     {
       name: 'Marcos',
       sex: 'male',
-      birthday: '16.05.1711'
+      birthday: 1012150581753
     }
   ];
 }
