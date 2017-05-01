@@ -1,3 +1,8 @@
 <p (click)="selectCurrentItem()">{{ item.name }}</p>
-<button type="button">Edit</button>
-<button type="button" (click)="deleteItem(index)">Delete</button>
+<button type="button" (click)="editItem(index)">Edit</button>
+<button type="button" (click)="confirmDelete()">Delete</button>
+<div class="delete-popup" *ngIf="deletePopup">
+  <p>Are you sure to delete?</p>
+  <button type="button" (click)="deleteItem(index)">Yes</button>
+  <button type="button" (click)="dismissDelete()">No</button>
+</div>

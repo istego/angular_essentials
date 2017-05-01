@@ -9,12 +9,28 @@ export class ListItemComponent {
   @Input() index;
   @Output() chosen: EventEmitter<{}> = new EventEmitter<{}>();
   @Output() deletedIndex: EventEmitter<number> = new EventEmitter<number>();
+  @Output() editedIndex: EventEmitter<number> = new EventEmitter<number>();
+
+  public deletePopup = false;
 
   selectCurrentItem() {
     this.chosen.emit(this.item);
+    this.deletePopup = false;
+  }
+
+  confirmDelete() {
+    this.deletePopup = true;
   }
 
   deleteItem(index) {
     this.deletedIndex.emit(index);
+  }
+
+  dismissDelete() {
+    this.deletePopup = false;
+  }
+
+  editItem(index) {
+    this.editedIndex.emit(index);
   }
 }

@@ -1,4 +1,4 @@
 <h1>Test</h1>
 <app-header></app-header>
-<list (chosen)='onChosen($event)' (newItem)='addNewItem($event)' [list]="list"></list>
-<item-detail [currentItem]="currentItem" [newItem]="newItem" (item)="saveItem($event)"></item-detail>
+<list (chosen)='onChosen($event)' (newItem)='addNewItem($event)' (onEditItem)="editItem($event)" [list]="list"></list>
+<item-detail [currentItem]="currentItem" [newItem]="newItem" [editedItem]="editedItem" (item)="saveItem($event)" (onEditItem)="saveEditItem($event)"></item-detail>

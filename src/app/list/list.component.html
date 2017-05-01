@@ -1,6 +1,6 @@
 <list-header (notify)='onNotify($event)' (newItem)='addNewItem($event)'></list-header>
 <ul>
   <li *ngFor="let item of list | search: search; let i = index" hoverHighlight>
-    <list-item [item]="item" [index]="i" (chosen)='onChosen($event)' (deletedIndex)='deleteItem($event, list)'></list-item>
+    <list-item [item]="item" [index]="i" (chosen)='onChosen($event)' (deletedIndex)='deleteItem($event, list)' (editedIndex)="editItem($event, list)"></list-item>
   </li>
 </ul>

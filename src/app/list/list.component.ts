@@ -8,6 +8,7 @@ export class ListComponent {
   @Input() list;
   @Output() chosen: EventEmitter<{}> = new EventEmitter<{}>();
   @Output() newItem: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onEditItem: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {
 
@@ -32,8 +33,15 @@ export class ListComponent {
     this.chosen.emit(null);
   }
 
+  editItem(index:number, list:{}[]):void {
+    let indexObj = {
+      index: index
+    };
+    let obj = Object.assign({}, list[index], indexObj);
+    this.onEditItem.emit(obj);
+  }
+
   getNewItem(item:any):void {
-    console.log('here');
     this.list.push(item);
   }
 

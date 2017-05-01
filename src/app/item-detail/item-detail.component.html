@@ -1,4 +1,4 @@
-<div *ngIf="currentItem && !newItem">
+<div *ngIf="currentItem && !newItem && !editedItem">
   <p>Name: <strong>{{ currentItem?.name }}</strong></p>
   <p>Sex: <strong>{{ currentItem?.sex }}</strong></p>
   <p>Birthday: <strong>{{ currentItem?.birthday | date }}</strong></p>
@@ -13,6 +13,20 @@
   </select>
   <p>Birthday:</p>
   <input type="date" name="birthday" [(ngModel)]="newItem.birthday" required>
+  <br /><br />
+  <button type="submit">Save</button>
+  <button type="button" (click)="cancelEdit()">Cancel</button>
+</form>
+<form (submit)="saveEditItem(editedItem)" *ngIf="editedItem">
+  <p>Name:</p>
+  <input type="text" name="name" [(ngModel)]="editedItem.name" required>
+  <p>Sex:</p>
+  <select [(ngModel)]="editedItem.sex" name="sex">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <p>Birthday:</p>
+  <input type="date" name="birthday" [(ngModel)]="editedItem.birthday" required>
   <br /><br />
   <button type="submit">Save</button>
   <button type="button" (click)="cancelEdit()">Cancel</button>
