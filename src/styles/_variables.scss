@@ -1,0 +1,21 @@
+$laptop: 1300px;
+$tablet: 992px;
+$mobile: 768px;
+
+@mixin laptop {
+  @media (max-width: $laptop - 1) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet - 1) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: $mobile - 1) {
+    @content;
+  }
+}
+
+$dark-color: #212121;

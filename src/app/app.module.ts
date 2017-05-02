@@ -29,7 +29,6 @@ import { AppComponent } from './app.component';
 import { AppState, InternalStateType } from './app.service';
 
 import '../styles/styles.scss';
-import '../styles/headings.css';
 
 // Application wide providers
 const APP_PROVIDERS = [

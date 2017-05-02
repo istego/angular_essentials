@@ -4,30 +4,32 @@
   <p>Birthday: <strong>{{ currentItem?.birthday | date }}</strong></p>
 </div>
 <form (submit)="saveItem(newItem)" *ngIf="newItem">
-  <p>Name:</p>
-  <input type="text" name="name" [(ngModel)]="newItem.name" required>
-  <p>Sex:</p>
-  <select [(ngModel)]="newItem.sex" name="sex">
+  <p class="form-label">Name:</p>
+  <input type="text" name="name" class="form-input" [(ngModel)]="newItem.name" required>
+  <p class="form-label">Sex:</p>
+  <select [(ngModel)]="newItem.sex" name="sex" class="form-input">
     <option value="male">Male</option>
     <option value="female">Female</option>
   </select>
-  <p>Birthday:</p>
-  <input type="date" name="birthday" [(ngModel)]="newItem.birthday" required>
-  <br /><br />
-  <button type="submit">Save</button>
-  <button type="button" (click)="cancelEdit()">Cancel</button>
+  <p class="form-label">Birthday:</p>
+  <input type="date" name="birthday" class="form-input" [(ngModel)]="newItem.birthday" required>
+  <div class="form-submit-block">
+    <button type="submit" class="form-btn">Save</button>
+    <button type="button" class="form-btn" (click)="cancelEdit()">Cancel</button>
+  </div>
 </form>
 <form (submit)="saveEditItem(editedItem)" *ngIf="editedItem">
-  <p>Name:</p>
-  <input type="text" name="name" [(ngModel)]="editedItem.name" required>
-  <p>Sex:</p>
-  <select [(ngModel)]="editedItem.sex" name="sex">
+  <p class="form-label">Name:</p>
+  <input type="text" name="name" class="form-input" [(ngModel)]="editedItem.name" required>
+  <p class="form-label">Sex:</p>
+  <select [(ngModel)]="editedItem.sex" name="sex" class="form-input">
     <option value="male">Male</option>
     <option value="female">Female</option>
   </select>
-  <p>Birthday:</p>
-  <input type="date" name="birthday" [(ngModel)]="editedItem.birthday" required>
-  <br /><br />
-  <button type="submit">Save</button>
-  <button type="button" (click)="cancelEdit()">Cancel</button>
+  <p class="form-label">Birthday:</p>
+  <input type="date" name="birthday" class="form-input" [(ngModel)]="editedItem.birthday" required>
+  <div class="form-submit-block">
+    <button type="submit" class="form-btn">Save</button>
+    <button type="button" class="form-btn" (click)="cancelEdit()">Cancel</button>
+  </div>
 </form>

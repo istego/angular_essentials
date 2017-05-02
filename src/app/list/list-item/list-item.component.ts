@@ -18,7 +18,8 @@ export class ListItemComponent {
     this.deletePopup = false;
   }
 
-  confirmDelete() {
+  confirmDelete(event) {
+    event.stopPropagation();
     this.deletePopup = true;
   }
 
@@ -30,7 +31,8 @@ export class ListItemComponent {
     this.deletePopup = false;
   }
 
-  editItem(index) {
+  editItem(event, index) {
+    event.stopPropagation();
     this.editedIndex.emit(index);
   }
 }

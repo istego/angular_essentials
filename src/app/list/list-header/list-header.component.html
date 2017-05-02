@@ -1,2 +1,4 @@
-<input type="text" placeholder="search" [(ngModel)]="search" (ngModelChange)='onChange(search)'>
-<button type="button" (click)="addNewItem()">Add</button>
+<div class="list-header">
+  <input type="text" placeholder="search" class="list-header__search" [(ngModel)]="search" (ngModelChange)='onChange(search)'>
+  <button type="button" (click)="addNewItem()" class="list-header__add">Add</button>
+</div>

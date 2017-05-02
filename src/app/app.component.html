@@ -1,4 +1,14 @@
-<h1>Test</h1>
-<app-header></app-header>
-<list (chosen)='onChosen($event)' (newItem)='addNewItem($event)' (onEditItem)="editItem($event)" [list]="list"></list>
-<item-detail [currentItem]="currentItem" [newItem]="newItem" [editedItem]="editedItem" (item)="saveItem($event)" (onEditItem)="saveEditItem($event)"></item-detail>
+<div class="container">
+  <h1 class="title">Angular Essentials</h1>
+  <app-header></app-header>
+  <div class="content">
+    <div class="row">
+      <div class="content__sidebar">
+        <list (chosen)='onChosen($event)' (newItem)='addNewItem($event)' (onEditItem)="editItem($event)" [list]="list"></list>
+      </div>
+      <div class="content__details">
+        <item-detail [currentItem]="currentItem" [newItem]="newItem" [editedItem]="editedItem" (item)="saveItem($event)" (onEditItem)="saveEditItem($event)"></item-detail>
+      </div>
+    </div>
+  </div>
+</div>

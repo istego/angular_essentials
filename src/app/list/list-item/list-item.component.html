@@ -1,8 +1,18 @@
-<p (click)="selectCurrentItem()">{{ item.name }}</p>
-<button type="button" (click)="editItem(index)">Edit</button>
-<button type="button" (click)="confirmDelete()">Delete</button>
+<div class="list-item__content" (click)="selectCurrentItem()">
+  <div class="list-item__left">
+    <span class="list-item__text">{{ item.name }}</span>
+  </div>
+  <div class="list-item__right">
+    <span class="list-item__btn" (click)="editItem($event, index)">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+    </span>
+    <span class="list-item__btn" (click)="confirmDelete($event)">
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </span>
+  </div>
+</div>
 <div class="delete-popup" *ngIf="deletePopup">
   <p>Are you sure to delete?</p>
-  <button type="button" (click)="deleteItem(index)">Yes</button>
-  <button type="button" (click)="dismissDelete()">No</button>
+  <button type="button" class="form-btn delete-popup__yes-btn" (click)="deleteItem(index)">Yes</button>
+  <button type="button" class="form-btn" (click)="dismissDelete()">No</button>
 </div>
